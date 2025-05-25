@@ -11,50 +11,67 @@
 
 		<link rel="stylesheet" href="style.css">
 	</head>
+	<body>
+		<header>
+			<img
+				src="header_image.png"
+				alt="Neon code banner"
+				class="banner"
+			/>
 
-	<header>
-		<img
-			src="header_image.png"
-			alt="Neon code banner"
-			class="banner"
-		/>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#resume">Resume</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-		<nav>
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#resume">Resume</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+		<main>
+			<section id="home" class="card">
+				<h1 class="glow-cyan">Gavin Wood</h1>
+				<h2 class="glow-magenta">Computer Engineering Student</h2>
+				<p>
+					Welcome to my website! I am a computer engineering 
+					student at the University of Maine. I enjoy working with
+					linux, low level programming, DIY tech builds, and 
+					learning new skills. 
+				</p>
+			</section>
 
-	<main>
-		<section id="home" class="card">
-			<h1 class="glow-cyan">Gavin Wood</h1>
-			<h2 class="glow-magenta">Computer Engineering Student</h2>
-			<p>
-				Welcome to my website! I am a computer engineering student at the University of Maine. I enjoy working with linux, low level programming, DIY tech builds, and learning new skills. 
-			</p>
-		</section>
+			<section id="projects">
+				<h2 class="section-title">Projects</h2>
+				<div class="project-grid">
+					<article class="project-card">
+						<h3>Image-Diff SIMD Tool</h3>
+						<p>
+							Fast C and NEON program that computes image
+							differences TBDx faster than naive pixel loops. 
+						</p>
+						<a 
+							href="https://github.com/Gavin-Wood4/image-diff"
+							target="_blank"
+							class="btn"
+							>View on Github
+						</a>
+					</article>
+				</div>
+			</section>
 
-		<section id="projects">
-			<h2 class="section-title">Projects</h2>
-			<div class="project-grid">
-				<article class="project-card">
-					<h3>Image-Diff SIMD Tool</h3>
-					<p>
-						Fast C + NEON program that computes image
-						differences TBDx faster than naive pixel loops. 
-					</p>
-					<a 
-						href="https://github.com/Gavin-Wood4/image-diff"
-						target="_blank"
-						class="btn"
-						>View on Github
+			<section id="contact" class="card">
+				<h2 class="section-title">Contact</h2>
+				<p>
+					Email: 
+					<a href="mailto:coming@coming.soon" class="link-neon"
+						>coming@coming.soon
 					</a>
-				</article>
-			</div>
-		</section>
-	</main>
+				</p>
+			</section>
+		</main>
+		<footer>
+			<p>Copyright 2025 Gavin Wood</p>
+		</footer>
+	</body>				<!-- This website was written entirely using Vim. -->
 </html>
