@@ -13,14 +13,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Deploy to VPS
-      uses: easing-themes/ssh-deploy@v5
+    - name: Deploy to VPS with rsync
+      uses: Burnett01/rsync-deployments@6.0.2 # Use a specific version
       with:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        REMOTE_HOST: ${{ secrets.SSH_HOST }}
-        REMOTE_USER: ${{ secrets.SSH_USER }}
-        SOURCE: "./" # Deploy the entire repository
-        TARGET: "/var/www/gavinwood.net/html/"
-        EXCLUDE: "/.git/, /.github/"
-        REMOTE_PORT: "22"
-        ARGS: "-rltgoDvz --delete"  # Use rsync and delete old files
+        switches: -rltgoDvz --delete # Your rsync switches
+        path: ./ # Source path on runner
+        remote_path: /var/www/gavinwood.net/html/ # Target path on VPS
+        remote_host: ${{ secrets.SSH_HOST }}
+        remote_user: ${{ secrets.SSH_USER }}
+        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        remote_port: 22
+        exclude: | # Use multi-line for excludes
+          .git/
+          .github/
