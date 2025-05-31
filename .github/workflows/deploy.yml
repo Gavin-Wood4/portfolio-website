@@ -13,6 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+<<<<<<< HEAD
     - name: Deploy to VPS
       uses: easing-themes/ssh-deploy@v5.0.0
       with:
@@ -24,3 +25,18 @@ jobs:
         EXCLUDE: "/.git/, /.github/"
         REMOTE_PORT: "22"
         ARGS: "-rltgoDvz --delete"  # Use rsync and delete old files
+=======
+    - name: Deploy to VPS with rsync
+      uses: Burnett01/rsync-deployments@6.0.2
+      with:
+        switches: -rltgoDvz --delete
+        path: ./
+        remote_path: /var/www/gavinwood.net/html/
+        remote_host: ${{ secrets.SSH_HOST }}
+        remote_user: ${{ secrets.SSH_USER }}
+        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        remote_port: 22
+        exclude: |
+          .git/
+          .github/
+>>>>>>> fa1848a (Docs(readme): Replaced placeholder readme with site design overview, future plans, and usage instructions.)
