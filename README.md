@@ -2,6 +2,8 @@
 
 This repository contains the code for my [personal portfolio website](https://www.gavinwood.net).
 
+This project demonstrates basic static HTML website creation and CSS styling.
+
 # Design Inspiration
 
 My inspirations for the theme of this site were jazz style disposable cups, indoor glow in the dark-neon mall golf from around 2009, and outer space. 
@@ -10,7 +12,7 @@ My inspirations for the theme of this site were jazz style disposable cups, indo
 
 - **Home Section:** Brief introduction/about me and my interests in computer engineering.
 - **Projects Section:** Repeatable card system enabling me to place multiple projects stacked ontop of each other with copy and paste HTML formatting and standard text entry locations.
-- **Contact Section:** Soon to provide a way to get in touch with me via an email hosted using [my domain](gavinwood.net).
+- **Contact Section:** Soon to provide a way to get in touch with me via an email hosted using my domain [gavinwood.net](https://www.gavinwood.net).
 
 ## Future Plans
 
